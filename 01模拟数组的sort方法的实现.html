@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <script src="getDate.js"></script>
 </head>
 <body>
 
 <script>
     function MyArray(){
-        this.mySort = function(arr){
+        this.mySort = function(arr){// 传递进来的数组 通过一系列计算 排序方式改变了 外面的数组的排序方式也会改变的
             // 使用冒泡排序实现数组中元素的sort方式
             // 轮数控制
             for(var i=0;i<arr.length-1;i++){
                 // 每轮控制的次数
                 for(var j=0;j<arr.length-1-i;j++){
+
                     if(arr[j]>arr[j+1]){
                         var temp = arr[j+1];
                         arr[j+1] = arr[j];
@@ -21,13 +23,22 @@
                     }
                 }
             }
-            console.log(arr);
+
         };
     }
+
+    var obj = new Date().valueOf(); // 获取毫秒数
+    var dt = new Date(obj); // 将毫秒数转换为Date对象类型的时间格式
+    console.log(getDate(dt)); // 将Date类型的时间格式 转换为 我们想要的时间格式
+
+
 
     var arr = [2,4,3,1,5,8,6,9,11,10];
     console.log(arr.length)
     new MyArray().mySort(arr);
+    console.log(arr);
+    arr.length = 0;// 清空数组中的元素
+    console.log(arr);
 </script>
 </body>
 </html>
