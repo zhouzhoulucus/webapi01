@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<script>
+    function MyArray(){
+        this.mySort = function(arr){
+            // 使用冒泡排序实现数组中元素的sort方式
+            // 轮数控制
+            for(var i=0;i<arr.length-1;i++){
+                // 每轮控制的次数
+                for(var j=0;j<arr.length-1-i;j++){
+                    if(arr[j]>arr[j+1]){
+                        var temp = arr[j+1];
+                        arr[j+1] = arr[j];
+                        arr[j] = temp;
+                    }
+                }
+            }
+            console.log(arr);
+        };
+    }
+
+    var arr = [2,4,3,1,5,8,6,9,11,10];
+    console.log(arr.length)
+    new MyArray().mySort(arr);
+</script>
+</body>
+</html>
