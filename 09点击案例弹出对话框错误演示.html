@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        // 页面是从上到下执行的, 在这里 找不到btn这个按钮的
+        // 先有按钮, 才能获取,获取之后 注册事件
+        // Uncaught ReferenceError: btn is not defined
+
+        // 根据id属性值从文档中获取这个元素
+        var btnOjb = document.getElementById("btn");
+        // 为这个按钮对象 注册事件, 添加事件处理函数(匿名函数)
+        btn.onclick = function () {
+            // 响应做的事情
+            alert("哈哈,小苏好帅哦");
+        };
+    </script>
+</head>
+<body>
+
+<input type="button" value="按钮" id="btn"/>
+</body>
+</html>

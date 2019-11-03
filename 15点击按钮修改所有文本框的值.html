@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<input type="button" value="修改文本框的值" id="btn"/><br/>
+<input type="text" value=""/><br/>
+<input type="text" value=""/><br/>
+<input type="text" value=""/><br/>
+<input type="text" value=""/><br/>
+<input type="text" value=""/><br/>
+<input type="text" value=""/><br/>
+<input type="text" value=""/><br/>
+
+
+<script>
+
+//    console.log(document.getElementById("btn").type == "button");
+
+    // 根据id获取按钮, 为按钮注册事件,添加事件处理函数
+    document.getElementById("btn").onclick=function(){
+        // 根据tag获取文本框,并且添加内容,   需要除去 type=button类型的
+        var inputs = document.getElementsByTagName("input");
+        for(var i=0;i<inputs.length;i++){
+            if(inputs[i].type == "button"){
+                continue;
+            }
+            inputs[i].value = "这是第"+(i+1)+"几个文本框";
+        }
+    };
+</script>
+</body>
+</html>

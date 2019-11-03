@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<input type="button" value="修改文字和热点图片" id="btn"/>
+<a href="https://www.baidu.com" id="a1">百度</a>
+
+<script>
+    // 案例 点击按钮修改a标签的按钮和热点文字
+    // 根据id获取按钮对象,为按钮对象注册事件,并且添加方法
+    document.getElementById("btn").onclick = function () {
+        // 根据id获取a标签,并且修改a标签的 href属性和热点文字属性
+        var aBiaoqian = document.getElementById("a1");
+        aBiaoqian.href = "https://mail.163.com";
+        aBiaoqian.innerText = "163邮箱";
+    };
+
+</script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<!--html代码中嵌入了js代码, 不方便后期的修改和维护-->
+<!--<input type="button" value="显示效果" onclick="alert('哈哈')"/>-->
+<!--最终的效果: 应该把js代码和html代码分离-->
+
+
+<!--js 代码很多 但是没有分离 html 和js该怎么做-->
+<!--<script>
+    function f1(){
+        // 很多代码
+        alert("哈哈,弹框了");
+    }
+</script>
+<input type="button" value="显示效果" onclick="f1()"/>-->
+
+<input type="button" value="开始分离代码" id="btn"/>
+<script>
+    function f2() {
+        alert("开发分离html和js代码");
+    }
+
+    function f2() {
+        alert("嘎嘎");
+    }
+    // html中标签属性 存储的值是唯一的, id属性就像人的身份证号码一样 不能重复
+    // 唯一的标志, 页面中唯一标志
+    // 从文档中找到id值为btn的这个标签(元素)
+    // document.getElementById("id属性的值") , 返回的是一个元素对象
+    var btnObj = document.getElementById("btn");
+    // 为按钮注册点击事件
+    btnObj.onclick = f2; //不加括号// 不加括号
+
+
+    // 按钮: 事件源
+    // 点击: 事件名字
+    // 被点了: 触发
+    // 弹框了: 相应
+</script>
+
+
+<!--最终版本代码  分离html和js-->
+<input type="button" , value="最终版本" id="btn1"/>
+<script>
+    //    // 根据id属性的值, 从整个文档获取这个元素(标签)
+    //    var btnObj1 = document.getElementById("btn1");
+    //    // 为这个元素注册事件
+    //    btnObj1.onclick=function(){
+    //        alert("这个是最终版本的");
+    //    };
+
+    document.getElementById("btn1").onclick=function(){
+        alert("哈哈,这个是最终版本的");
+    };
+
+</script>
+
+
+</body>
+</html>

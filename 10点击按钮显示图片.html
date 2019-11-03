@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<input type="button" value="显示图片" id="btn"/>
+<!--宽和高是 img标签特有的属性, 不需要加px , 在 CSS中的style标签中设置宽和高是需要加px的-->
+<img src="" alt="" width="" height="" id="im"/>
+
+<script>
+    // 点击按钮显示图片: 点击按钮的时候 设置img标签的src属性有一个图片的路径
+    // 根据id获取按钮对象
+    var btnOjbect = document.getElementById("btn");
+    // 为按钮对象注册事件
+    btnOjbect.onclick = function () {
+        // 为 根据id获取img标签,并且根据img标签设置图片src 并且设置img标签宽和高
+        var image = document.getElementById("im");
+        image.src="images/liuyan.jpg";
+        image.width="300";
+        image.height="400";
+    };
+</script>
+
+</body>
+</html>

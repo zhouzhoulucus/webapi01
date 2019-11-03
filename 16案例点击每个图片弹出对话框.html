@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        img{
+            width:200px;
+            height: 120px;
+        }
+    </style>
+</head>
+<body>
+<img src="images/1.jpg" alt="" id="im1"/>
+<img src="images/2.jpg" alt="" id="im2"/>
+<img src="images/3.jpg" alt="" id="im3"/>
+<img src="images/4.jpg" alt="" id="im4"/>
+
+
+<script>
+    // 点击图片弹框, 根据tag获取图片标签数组,遍历数组,注册点击事件,添加事件函数
+    var imgs = document.getElementsByTagName("img");
+    for(var i=0;i<imgs.length;i++){
+        imgs[i].onclick= function () {
+          alert("被点击了");
+        };
+    }
+</script>
+</body>
+</html>

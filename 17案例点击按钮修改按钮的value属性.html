@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<input type="button" value="按钮" id="btn"/>
+
+<script>
+    // 在某个元素的事件中, 自己的事件中 this 就是当前元素的对象
+
+    var btnObj = document.getElementById("btn");
+    btnObj.onclick=function(){
+        // 修改按钮的value属性
+        this.value="这是一个按钮";
+        // 修改按钮的type属性
+        this.type="text";
+        // 修改按钮的id属性
+        this.id="btn2";
+    };
+
+</script>
+</body>
+</html>
