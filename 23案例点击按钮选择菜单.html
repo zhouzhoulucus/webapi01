@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="common.js"></script>
+</head>
+<body>
+<input type="button" value="点菜" id="btn"/>
+
+<select name="" id="ss">
+    <option value="1">油炸榴莲</option>
+    <option value="2">爆炒臭豆腐</option>
+    <option value="3">清蒸助教</option>
+    <option value="4" id="op1">凉拌班主任</option>
+    <option value="5">红烧小苏</option>
+</select>
+
+<!--所有的表单标签要提交 是要放到form标签里面的, 表单标签里面的内容要通过value的方式来设置的-->
+<textarea name="" id="tt" cols="30" rows="10" readonly="readonly" >
+    哈哈
+    聚少离多开房记录德生科技
+    就看到了福建的抗衰老
+    jdsfkljld
+    讲课的浪费时间弗兰克
+    进口量都是房价来看
+    就考虑对方就
+</textarea>
+<input id="btn3" value="注册" type="button"/>
+<!--通过点击注册按钮修改文本域里面的内容-->
+<script>
+    my$("btn3").onclick=function(){
+        // 表单标签里面的内容要通过value方式来设置的
+        my$("tt").value= "卧槽"; //推荐用 value, 因为看成了是表单标签
+//        my$("tt").innerText="我勒个去";
+    };
+</script>
+
+
+<script>
+    my$("btn").onclick=function(){
+        my$("op1").selected=true;
+    };
+
+    // disabled ====> 这个属性是禁用的
+    // html中属性和值是自己的,并且只有一个的,其实,可以只写这个属性,是不用赋值的
+</script>
+</body>
+</html>

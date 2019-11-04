@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+<input type="button" value="隐藏" id="btn"/>
+<div id="dv"></div>
+
+<script src="common.js"></script>
+<script>
+    my$("btn").onclick=function(){
+        // 当div的状态为 显示的时候, 将div中 style.display属性修改为none,并且将button标签内容修改为显示
+        // 这样写是不出效果的
+//        if(my$("dv").style.display=="block"){
+//            my$("dv").style.display="none";
+//            my$("btn").value="显示";
+//        }else if(my$("dv").style.display=="none"){
+//            my$("dv").style.display="block";
+//            my$("btn").value="隐藏";
+//        }
+
+        if(this.value=="显示"){
+            my$("dv").style.display="block";
+            this.value="隐藏"
+        } else if(this.value =="隐藏"){
+            my$("dv").style.display="none"
+            this.value="显示";
+        }
+
+
+    };
+</script>
+
+</body>
+</html>

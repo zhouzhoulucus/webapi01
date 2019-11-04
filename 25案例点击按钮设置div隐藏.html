@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: #ff4632;
+        }
+    </style>
+</head>
+<body>
+<!--元素隐藏 display变成null-->
+<input type="button" value="隐藏" id="btn"/>
+<input type="button" value="显示" id="btn2"/>
+<!--style="display: none" 将其显示为隐藏-->
+<div id="dv" ></div>
+
+<!--引入getDate.js-->
+<!--注意 script标签一定是成对出现的-->
+<script src="common.js"></script>
+<script>
+    // 点击隐藏按钮, 将div的 display 属性修改为none即可
+    // 想要一个元素隐藏, 将该元素的 style属性中 display属性变成none即可
+    my$("btn").onclick=function(){
+        my$("dv").style.display="none";
+    };
+
+    my$("btn2").onclick=function(){
+        my$("dv").style.display="block";
+    };
+</script>
+</body>
+</html>

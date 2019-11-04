@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .cls{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+<input type="button" value="设置样式" id="btn"/>
+<!--可以在这里添加 class="cls"  但是在下面的js代码中使用的关键字应该是 className-->
+<div id="dv" ></div>
+<script src="common.js"></script>
+<script>
+    // 根据id获取按钮对象, 为按钮的点击事件, 添加函数
+    my$("btn").onclick=function(){
+        // 在js代码中DOM操作的时候,设置元素的样式,不用class关键字
+        // 应该会使用className
+        my$("dv").className="cls";
+    };
+</script>
+</body>
+</html>

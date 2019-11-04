@@ -34,3 +34,8 @@ function getDate(dt) {
 
     return year + "年" + month + "月" + day + "日 " + hour + ":" + min + ":" + sec;
 }
+
+
+function my$(id){
+    return document.getElementById(id);
+}
